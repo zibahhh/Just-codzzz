@@ -1,0 +1,81 @@
+Problem Statement
+
+
+In a famous jewelry shop, customers are grouped according to age and gender.
+
+
+Group 1: Males under 25 years old
+
+Group 2: Females under 25 years old
+
+Group 3: Males between 25 - 45 years old
+
+Group 4: Females between 25 - 45 years old
+
+Group 5: All people over 45 years old.
+
+
+Babu wants to write a program to display the customer's group. Help Babu achieve his objective.
+
+
+Note: The gender code for a male is 1 and for a female is 2. If the user enters another gender code, it will be displayed as Invalid.
+Input format :
+
+The input consists of two integers separated by a space, representing the age and gender of a person.
+Output format :
+
+The output is a sentence indicating the group to which the person belongs, or "Invalid" if the input is invalid.
+
+
+Refer to the sample output for the formatting specifications.
+Code constraints :
+
+age>0
+
+gender>0
+Sample test cases :
+Input 1 :
+
+23 1
+
+Output 1 :
+
+The person belongs to Group 1.
+
+Input 2 :
+
+25 4
+
+Output 2 :
+
+Invalid
+
+CODE:
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int age;
+    int gender;
+    cin >> age >> gender;
+
+    if((age<25) && (gender==1))
+        cout << "The person belongs to Group 1.";
+
+    else if((age<25) && (gender==2))
+        cout << "The person belongs to Group 2.";
+
+    else if((age<46) && (gender==1))
+        cout << "The person belongs to Group 3.";
+
+    else if((age<46) && (gender==2))
+        cout << "The person belongs to Group 4.";
+
+    else if( ((age>45) && (gender==1) || (gender==2)))
+        cout << "The person belongs to Group 5.";
+ 
+    else
+        cout << "Invalid";
+
+    return 0;
+}
