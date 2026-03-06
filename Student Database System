@@ -1,0 +1,21 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+struct Student {
+    int id;
+    string name;
+    float grade;
+};
+
+int main() {
+    vector<Student> database;
+    database.push_back({101, "Alice", 92.5});
+    database.push_back({102, "Bob", 85.0});
+
+    cout << "Student Records:\n";
+    for(const auto& s : database) {
+        cout << "ID: " << s.id << " | Name: " << s.name << " | Grade: " << s.grade << endl;
+    }
+    return 0;
+}
