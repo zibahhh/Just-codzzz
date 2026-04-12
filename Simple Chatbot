@@ -1,0 +1,11 @@
+#include <iostream>
+#include <string>
+int main() {
+    std::string input;
+    std::cout << "Hello! Ask me something:\n";
+    while(std::getline(std::cin, input)) {
+        if(input=="hi") std::cout << "Hi there!\n";
+        else if(input=="bye") { std::cout << "Goodbye!\n"; break; }
+        else std::cout << "I don't understand.\n";
+    }
+}
