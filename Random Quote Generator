@@ -1,0 +1,9 @@
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+int main() {
+    std::vector<std::string> quotes = {"Stay hungry, stay foolish.", "Code is poetry.", "Simplicity is genius."};
+    std::srand(std::time(0));
+    std::cout << quotes[std::rand() % quotes.size()] << "\n";
+}
