@@ -1,0 +1,7 @@
+#include <iostream>
+void tree(int depth) {
+    if(depth==0) return;
+    std::cout << std::string(depth,'*') << "\n";
+    tree(depth-1);
+}
+int main() { tree(5); }
