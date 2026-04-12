@@ -1,0 +1,6 @@
+#include <iostream>
+#include <algorithm>
+int main() {
+    auto isPalindrome = [](std::string s){ return s == std::string(s.rbegin(), s.rend()); };
+    std::cout << isPalindrome("level") << "\n";
+}
